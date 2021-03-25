@@ -1,28 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <router-view></router-view>
+    <keep-alive>
+      <router-view name='alive'></router-view>
+    </keep-alive>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  watch: {
+    $route(to, from) {
+      console.log('to', to)
+      console.log('from', from)
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style lang='scss'>
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(247, 247, 247, 1);
+}
+.app {
+  height: 100%;
+  width: 100%;
+}
+[v-cloak] {
+  display: none;
+}
+
+// 解决购物车checkbox左右居中问题
+.van-checkbox {
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+.van-checkbox__icon {
+  margin: 0 auto;
 }
 </style>

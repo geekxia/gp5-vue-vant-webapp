@@ -1,7 +1,7 @@
 import axios from 'axios'
 import dialog from './dialog'
 
-const baseURL = 'http://localhost:8001'
+const baseURL = 'http://m.3fengs.com'
 const version = '/api/v1'
 
 // 创建axios实例

@@ -5,7 +5,8 @@ Vue.use(VueRouter)
 import routes from '@/views'
 
 const router = new VueRouter({
-  mode: 'hash',
+  // mode: 'hash',
+  mode: 'history',
   routes: [
     ...routes,
     { path: '/*', redirect: '/home' }

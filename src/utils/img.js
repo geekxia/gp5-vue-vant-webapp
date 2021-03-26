@@ -3,10 +3,10 @@ import u2Icon from '@/assets/icon/u2.png'
 import u3Icon from '@/assets/icon/u3.png'
 
 // 本地public
-const imgBase = 'http://localhost:8001'  // 本地开发服务器的图片
+const imgBase = 'http://m.3fengs.com'  // 本地开发服务器的图片
 
 // 远程图片服务地址
-const baseImg = "http://localhost:8888"   // 远程服务器上的图片
+const baseImg = "http://cdn.3fengs.com"   // 远程服务器上的图片
 
 // 使用模块化来管理应用中的所有图片资源
 export default {
